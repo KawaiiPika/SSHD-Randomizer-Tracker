@@ -27,6 +27,7 @@ export default function Acknowledgement() {
                     />
                 ))}
             </div>
+            <div>Branched from YourAverageLink by KawaiiPika</div>
             <div>
                 <span style={{ paddingRight: '1%' }}>
                     <a href="https://github.com/youraveragelink/SS-Randomizer-Tracker/tree/archipelago">
