@@ -22,7 +22,15 @@ const polyfills = legacy({
 
 export default defineConfig(({ mode }) => {
     const isProd = mode === 'production';
-    const baseUrl = isProd ? '/SS-Randomizer-Tracker' : '/';
+    let baseUrl = isProd ? '/SS-Randomizer-Tracker/' : '/';
+    if (process.env.BASE_URL) {
+        baseUrl = process.env.BASE_URL;
+    } else if (process.env.GITHUB_REPOSITORY) {
+        const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
+        if (repoName) {
+            baseUrl = `/${repoName}/`;
+        }
+    }
 
     return {
         base: baseUrl,
