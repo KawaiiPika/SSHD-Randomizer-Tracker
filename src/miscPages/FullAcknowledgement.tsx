@@ -57,7 +57,7 @@ export default function FullAcknowledgement() {
             })}
             <div>
                 <span style={{ paddingRight: '1%' }}>
-                    <a href="https://github.com/youraveragelink/SS-Randomizer-Tracker/tree/archipelago">
+                    <a href="https://github.com/KawaiiPika/SS-Randomizer-Tracker/tree/archipelago">
                         View the Source Code
                         <i
                             style={{ paddingLeft: '0.3%' }}

@@ -124,10 +124,12 @@ const optionCategorization: Record<string, readonly LogicOption[]> =
 const wellKnownRemotes: {
     prettyName: string;
     remoteName: string;
+    displayUrl?: string;
 }[] = [
     {
         prettyName: 'Latest Archipelago Build',
         remoteName: 'https://github.com/Battlecats59/sslib/tree/archipelago',
+        displayUrl: 'https://github.com/LonLon-Labs/SSHD_APWorld',
     },
     /*{
         prettyName: 'Latest Stable Release',
@@ -313,24 +315,30 @@ function useRemoteOptions(): SelectValue<RemoteReference>[] {
     const githubReleases = useReleases();
 
     return useMemo(() => {
-        const niceRemoteName = (remoteName: string, prettyName: string) => {
+        const niceRemoteName = (
+            remoteName: string,
+            prettyName: string,
+            displayUrl?: string,
+        ) => {
             if (remoteName === LATEST_STRING) {
                 return githubReleases
                     ? `${prettyName} (${githubReleases.latest})`
                     : prettyName;
             } else {
-                return `${prettyName} (${remoteName})`;
+                return `${prettyName} (${displayUrl ?? remoteName})`;
             }
         };
 
-        return wellKnownRemotes.map(({ prettyName, remoteName }) => {
-            const remote = parseRemote(remoteName)!;
-            return {
-                value: JSON.stringify(remote),
-                payload: remote,
-                label: niceRemoteName(remoteName, prettyName),
-            };
-        });
+        return wellKnownRemotes.map(
+            ({ prettyName, remoteName, displayUrl }) => {
+                const remote = parseRemote(remoteName)!;
+                return {
+                    value: JSON.stringify(remote),
+                    payload: remote,
+                    label: niceRemoteName(remoteName, prettyName, displayUrl),
+                };
+            },
+        );
         /*
         if (githubReleases) {
             const supportedReleases = githubReleases.releases.filter((r) =>
@@ -386,7 +394,7 @@ function LogicChooser({
 
     return (
         <div className={clsx(styles.optionsCategory, styles.logicChooser)}>
-            <legend>
+            <legend className={styles.logicLegend}>
                 Randomizer Version
                 {activeOption
                     ? `: ${activeOption.label}`
