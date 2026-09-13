@@ -1,6 +1,6 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { getStoredCustomization } from '../LocalStorage';
-import { type ColorScheme, lightColorScheme } from './ColorScheme';
+import { type ColorScheme, darkColorScheme } from './ColorScheme';
 
 export type ItemLayout = 'grid' | 'inventory';
 export type LocationLayout = 'list' | 'map';
@@ -20,7 +20,7 @@ export interface CustomizationState {
 }
 
 const initialState: CustomizationState = {
-    colorScheme: lightColorScheme,
+    colorScheme: darkColorScheme,
     itemLayout: 'inventory',
     locationLayout: 'map',
     trickSemilogic: false,
@@ -38,7 +38,7 @@ export function preloadedCustomizationState(): CustomizationState {
     return {
         ...initialState,
         ...loadedState,
-        colorScheme: { ...lightColorScheme, ...loadedState.colorScheme },
+        colorScheme: { ...darkColorScheme, ...loadedState.colorScheme },
     };
 }
 

@@ -1,7 +1,9 @@
-# Skyward Sword Randomizer AP Tracker
+# Skyward Sword HD Randomizer AP Tracker
 [![Discord](https://discordapp.com/api/guilds/767090759773323264/embed.png?style=shield)](https://discord.gg/evpNKkaaw6)
 
 Web based Archipelago auto-tracker for the [Skyward Sword Randomizer APWorld](https://github.com/Battlecats59/SSArchipelago).
+
+This project was branched from [YourAverageLink](https://github.com/youraveragelink) by KawaiiPika.
 
 ## Instances
 [Production](https://youraveragelink.github.io/SS-Randomizer-Tracker/) - the one and only deployed version of this tracker. Directly updated from the default branch of this repository within minutes of merging a Pull Request.

@@ -77,6 +77,16 @@
             ]
         },
         {
+            "name": "KawaiiPika",
+            "links": {
+                "github": "https://github.com/KawaiiPika"
+            },
+            "attributions": [
+                "HD Randomizer Tracker",
+                "Branched from YourAverageLink"
+            ]
+        },
+        {
             "name": "robojumper",
             "links": {
                 "github": "https://github.com/robojumper"
