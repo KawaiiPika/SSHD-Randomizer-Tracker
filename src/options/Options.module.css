@@ -84,6 +84,13 @@
     background: rgba(40, 40, 20, 0.1);
     text-align: left;
     width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.logicLegend {
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .optionsTab {

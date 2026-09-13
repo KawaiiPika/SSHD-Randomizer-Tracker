@@ -1,21 +1,22 @@
 # Skyward Sword HD Randomizer AP Tracker
 [![Discord](https://discordapp.com/api/guilds/767090759773323264/embed.png?style=shield)](https://discord.gg/evpNKkaaw6)
 
-Web based Archipelago auto-tracker for the [Skyward Sword Randomizer APWorld](https://github.com/Battlecats59/SSArchipelago).
+Web based Archipelago auto-tracker for the [Skyward Sword HD Randomizer APWorld](https://github.com/LonLon-Labs/SSHD_APWorld).
 
-This project was branched from [YourAverageLink](https://github.com/youraveragelink) by KawaiiPika.
+This project was branched from [YourAverageLink](https://github.com/youraveragelink) by [KawaiiPika](https://github.com/KawaiiPika).
 
 ## Instances
-[Production](https://youraveragelink.github.io/SS-Randomizer-Tracker/) - the one and only deployed version of this tracker. Directly updated from the default branch of this repository within minutes of merging a Pull Request.
+[Production](https://KawaiiPika.github.io/SS-Randomizer-Tracker/) - the deployed version of this tracker. Directly updated from the default branch of this repository within minutes of merging a Pull Request.
 
 ## Usage
 
-Find instructions and detailed documentation on the tracker's features in the [Tracker User Guide](https://youraveragelink.github.io/SS-Randomizer-Tracker/guide).
+Find instructions and detailed documentation on the tracker's features in the [Tracker User Guide](https://KawaiiPika.github.io/SS-Randomizer-Tracker/guide).
 
 ## Supported Randomizer Version
 
 The tracker should support the following randomizer versions:
 
+* The [Skyward Sword HD Archipelago APWorld](https://github.com/LonLon-Labs/SSHD_APWorld)
 * The [latest stable Randomizer release](https://github.com/ssrando/ssrando/releases/latest)
 * The [latest Randomizer development build](https://nightly.link/ssrando/ssrando/workflows/build.yaml/main)
 * The [latest official beta-features build](https://nightly.link/ssrando/ssrando/workflows/build.yaml/beta-features)
@@ -25,7 +26,7 @@ Other builds (older releases, experimental branches) are not officially supporte
 
 ## Reporting Issues
 
-Ran into a bug? Bugs found in the production instance should be reported [here on GitHub](https://github.com/youraveragelink/SS-Randomizer-Tracker/issues) or in the Discord.
+Ran into a bug? Bugs found in the production instance should be reported [here on GitHub](https://github.com/KawaiiPika/SS-Randomizer-Tracker/issues) or in the Discord.
 
 ## Running From Source
 Building and running an instance of the tracker locally requires Node v20 and npm.
@@ -47,10 +48,10 @@ Run `npm run prepare` once to set up a convenient pre-commit hook that automatic
 
 ## Shoutouts
 
-Also see the [Acknowledgements](https://youraveragelink.github.io/SS-Randomizer-Tracker/acknowledgement) page.
+Also see the [Acknowledgements](https://KawaiiPika.github.io/SS-Randomizer-Tracker/acknowledgement) page.
 
 - [lepelog](https://github.com/lepelog), [peppernicus](https://github.com/Peppernicus2000), [azer67](https://github.com/azer67) - Creating the [randomizer](https://github.com/ssrando/ssrando)
-- [Floha](https://github.com/Floha258), [Kuonino](https://github.com/Kuonino), Extodasher, [CapitanBublo](https://github.com/CapitanBublo), [CovenEsme](https://github.com/covenesme), [YourAverageLink](https://github.com/youraveragelink) - Fellow devs on the tracker
+- [Floha](https://github.com/Floha258), [Kuonino](https://github.com/Kuonino), Extodasher, [CapitanBublo](https://github.com/CapitanBublo), [CovenEsme](https://github.com/covenesme), [YourAverageLink](https://github.com/youraveragelink), [KawaiiPika](https://github.com/KawaiiPika) - Fellow devs on the tracker
 - [wooferzfg](https://github.com/wooferzfg) - Creating [the tracker for The Wind Waker Randomizer](https://github.com/wooferzfg/tww-rando-tracker), from which much of the original logic subsystem in this tracker was derived
 - [cjs](https://github.com/cjs8487/) - Creating [the original Skyward Sword Randomizer tracker](https://github.com/cjs8487/SS-Randomizer-Tracker), from which this tracker was originally forked
 - [robojumper](https://github.com/robojumper/) - Maintaining the modern [Skyward Sword Randomizer web tracker](https://github.com/robojumper/SS-Randomizer-Tracker), from which this tracker was forked for AP support.

@@ -34,11 +34,15 @@ const initialState: CustomizationState = {
 
 export function preloadedCustomizationState(): CustomizationState {
     const loadedState = getStoredCustomization();
+    const loadedColorScheme =
+        loadedState.colorScheme?.background === '#FFFFFF'
+            ? darkColorScheme
+            : { ...darkColorScheme, ...loadedState.colorScheme };
 
     return {
         ...initialState,
         ...loadedState,
-        colorScheme: { ...darkColorScheme, ...loadedState.colorScheme },
+        colorScheme: loadedColorScheme,
     };
 }
 

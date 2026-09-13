@@ -12,6 +12,7 @@ declare const classNames: {
     readonly optionsTooltip: 'optionsTooltip';
     readonly bold: 'bold';
     readonly optionsCategory: 'optionsCategory';
+    readonly logicLegend: 'logicLegend';
     readonly optionsTab: 'optionsTab';
     readonly checkboxOption: 'checkboxOption';
     readonly optionsBadRemote: 'optionsBadRemote';

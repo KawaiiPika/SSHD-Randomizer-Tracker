@@ -12,6 +12,10 @@
      * black or white depending on what provides better contrast against a
      * --scheme-interact background.
      */
+    --scheme-background: #000000;
+    --scheme-text: #ffffff;
+    --scheme-interact: #0d6efd;
+    --scheme-interact-text: #ffffff;
     --scheme-interact-hover: color-mix(
         in srgb,
         var(--scheme-interact) 80%,
