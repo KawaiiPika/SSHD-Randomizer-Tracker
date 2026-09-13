@@ -228,9 +228,14 @@ export class APClientManager {
                 (slotData['required_dungeons'] as string[]) ?? [];
             client.socket.send({
                 cmd: 'GetDataPackage',
-                games: ['Skyward Sword'],
+                games: ['Skyward Sword', 'Skyward Sword HD'],
             });
-            this.cubeDataKey = `skyward_sword_cubes_${content.team}_${content.slot}`;
+            const slotGame = content.slot_info[content.slot]?.game;
+            const cubePrefix =
+                slotGame === 'Skyward Sword HD'
+                    ? 'skyward_sword_hd_cubes'
+                    : 'skyward_sword_cubes';
+            this.cubeDataKey = `${cubePrefix}_${content.team}_${content.slot}`;
             client.socket.send({
                 cmd: 'SetNotify',
                 keys: [this.cubeDataKey],
@@ -242,7 +247,9 @@ export class APClientManager {
         });
 
         client.socket.on('dataPackage', (content) => {
-            const ssData = content.data.games['Skyward Sword'];
+            const ssData =
+                content.data.games['Skyward Sword HD'] ??
+                content.data.games['Skyward Sword'];
             console.log(ssData);
             if (ssData !== undefined) {
                 this.idToLocation = invert<string, number>(
@@ -392,7 +399,7 @@ export class APClientManager {
         try {
             this.status = { state: 'loggingIn' };
             this.notifyStatusSubscribers();
-            await client.login(server, slot, 'Skyward Sword', {
+            await client.login(server, slot, '', {
                 tags: ['Tracker'],
                 password: password,
                 version: {
